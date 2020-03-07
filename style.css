@@ -82,9 +82,36 @@ nav #toolbar ul li:hover {
   width: 1050px;
 }
 
+#folder {
+  position: absolute;
+  right: 20px;
+}
+
+#folder .folder-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  margin-top: 30px;
+}
+
+#folder .folder-container a {
+  display: block;
+  text-align: center;
+}
+
+#folder .folder-container a img {
+  display: block;
+  width: 80px;
+}
+
+#folder .folder-container a span {
+  text-decoration: none;
+}
+
 footer {
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
