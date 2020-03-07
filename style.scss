@@ -21,7 +21,7 @@ nav {
 	#toolbar {
 		display: inline-block;
 		position: relative;
-		width: 450px;
+		width: 100%;
 		height: 35px;
 		img {
 			position: absolute;
@@ -50,5 +50,16 @@ nav {
 				}
 			}
 		}
+	}
+}
+
+#desktop {
+	width: 650px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	img {
+		width: 100%;
 	}
 }
