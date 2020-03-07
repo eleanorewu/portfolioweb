@@ -54,12 +54,31 @@ nav {
 }
 
 #desktop {
-	width: 650px;
 	position: absolute;
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -40%);
 	img {
+		width: 650px;
+	}
+}
+
+#shelves {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform:  translateX(-50%);
+	img {
+		width: 1050px;
+	}
+}
+
+footer{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform:  translateX(-50%);
+	p{
 		width: 100%;
 	}
 }

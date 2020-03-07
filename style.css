@@ -59,7 +59,6 @@ nav #toolbar ul li:hover {
 }
 
 #desktop {
-  width: 650px;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -68,6 +67,30 @@ nav #toolbar ul li:hover {
 }
 
 #desktop img {
+  width: 650px;
+}
+
+#shelves {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#shelves img {
+  width: 1050px;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+footer p {
   width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
