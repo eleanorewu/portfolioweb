@@ -69,13 +69,13 @@ nav #socialmedia {
 
 nav #socialmedia a {
   margin-top: 5px;
-  margin-left: 5px;
+  margin-left: 3px;
   width: 28px;
 }
 
 nav #socialmedia img {
   margin-left: 5px;
-  margin-top: 5px;
+  margin-top: 3px;
   width: 22px;
   -o-object-fit: cover;
      object-fit: cover;
