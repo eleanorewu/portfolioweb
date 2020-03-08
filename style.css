@@ -29,8 +29,8 @@ nav #toolbar {
 
 nav #toolbar img {
   position: absolute;
-  top: 0;
-  width: 145px;
+  top: 2px;
+  width: 130px;
   margin-left: 15px;
 }
 
@@ -38,7 +38,7 @@ nav #toolbar ul {
   list-style: none;
   position: absolute;
   top: 5px;
-  left: 160px;
+  left: 145px;
 }
 
 nav #toolbar ul li {
@@ -48,10 +48,11 @@ nav #toolbar ul li {
 nav #toolbar ul li a {
   text-decoration: none;
   color: #fff;
-  margin-left: 20px;
-  font-weight: 400;
+  margin-left: 12px;
+  font-weight: 600;
   font-family: 微軟正黑體;
-  font-size: 18px;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 nav #toolbar ul li:hover {
@@ -67,7 +68,7 @@ nav #toolbar ul li:hover {
 }
 
 #desktop img {
-  width: 650px;
+  width: 500px;
 }
 
 #shelves {
@@ -79,7 +80,7 @@ nav #toolbar ul li:hover {
 }
 
 #shelves img {
-  width: 1050px;
+  width: 850px;
 }
 
 #folder {
@@ -102,7 +103,7 @@ nav #toolbar ul li:hover {
 
 #folder .folder-container a img {
   display: block;
-  width: 80px;
+  width: 60px;
 }
 
 #folder .folder-container a span {
