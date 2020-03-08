@@ -59,6 +59,28 @@ nav #toolbar ul li:hover {
   opacity: 0.6;
 }
 
+nav #socialmedia {
+  display: inline-block;
+  position: absolute;
+  height: 35px;
+  top: 0;
+  left: 85%;
+}
+
+nav #socialmedia a {
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 28px;
+}
+
+nav #socialmedia img {
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 22px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #desktop {
   position: absolute;
   top: 40%;

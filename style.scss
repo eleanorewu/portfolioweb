@@ -6,7 +6,7 @@
 // 背景底
 body {
 	background: #efefef;
-	background-image: linear-gradient( rgba(32, 32, 32, 0.2) 1px, transparent 0),
+	background-image: linear-gradient(rgba(32, 32, 32, 0.2) 1px, transparent 0),
 		linear-gradient(90deg, rgba(32, 32, 32, 0.2) 1px, transparent 0);
 	background-size: 30px 30px, 30px 30px;
 	width: 100%;
@@ -52,6 +52,26 @@ nav {
 			}
 		}
 	}
+
+	#socialmedia {
+		display: inline-block;
+		position:absolute;
+		height: 35px;
+		top: 0;
+		left: 85%;
+		a{
+			margin-top: 5px;
+			margin-left: 5px;
+			width: 28px;
+		}
+		img{
+			margin-left: 5px;
+			margin-top: 5px;
+			width: 22px;
+			object-fit: cover;
+		}
+	}
+
 }
 // 桌面圖
 #desktop {
