@@ -5,12 +5,6 @@
   color: black;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  color: black;
-}
-
 body {
   background: #efefef;
   background-image: linear-gradient(rgba(32, 32, 32, 0.2) 1px, transparent 0), linear-gradient(90deg, rgba(32, 32, 32, 0.2) 1px, transparent 0);
@@ -109,6 +103,125 @@ nav #socialmedia img {
 
 #shelves img {
   width: 850px;
+}
+
+.dock {
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  background-color: transparent;
+  z-index: 0;
+}
+
+.dock li:nth-last-child(n+2) {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  -webkit-transition: width 0.5s,height 0.5s;
+  transition: width 0.5s,height 0.5s;
+}
+
+.dock li:nth-last-child(n+2):hover {
+  width: 128px;
+  height: 128px;
+}
+
+.dock li:nth-child(1):hover ~ .last img:nth-child(1),
+.dock li:nth-child(2):hover ~ .last img:nth-child(2),
+.dock li:nth-child(3):hover ~ .last img:nth-child(3),
+.dock li:nth-child(4):hover ~ .last img:nth-child(4),
+.dock li:nth-child(5):hover ~ .last img:nth-child(5),
+.dock li:nth-child(6):hover ~ .last img:nth-child(6),
+.dock li:nth-child(7):hover ~ .last img:nth-child(7) {
+  width: 128px;
+  height: 128px;
+}
+
+.dock li:nth-child(1):hover ~ .last img:nth-child(2),
+.dock li:nth-child(7):hover ~ .last img:nth-child(6),
+.dock li:nth-child(2):hover ~ .last img:nth-child(1),
+.dock li:nth-child(2):hover ~ .last img:nth-child(3),
+.dock li:nth-child(3):hover ~ .last img:nth-child(2),
+.dock li:nth-child(3):hover ~ .last img:nth-child(4),
+.dock li:nth-child(4):hover ~ .last img:nth-child(3),
+.dock li:nth-child(4):hover ~ .last img:nth-child(5),
+.dock li:nth-child(5):hover ~ .last img:nth-child(4),
+.dock li:nth-child(5):hover ~ .last img:nth-child(6),
+.dock li:nth-child(6):hover ~ .last img:nth-child(5),
+.dock li:nth-child(6):hover ~ .last img:nth-child(7) {
+  width: 70px;
+  height: 70px;
+}
+
+.dock li {
+  margin-right: 15px;
+}
+
+.dock li:hover .tooltip {
+  opacity: 1;
+}
+
+.dock li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Tooltips */
+.dock li .tooltip {
+  opacity: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0.3rem 0.9rem;
+  border-radius: 12px;
+  background-color: #dbdbdb;
+  font-size: 0.8rem;
+  font-weight: bold;
+  pointer-events: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.dock li .tooltip:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #dbdbdb transparent transparent transparent;
+}
+
+.dock .last {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+.dock img {
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  -webkit-transition: width 0.5s,height 0.5s;
+  transition: width 0.5s,height 0.5s;
 }
 
 #folder {
