@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   color: black;
-  outline: 1px solid #f99;
 }
 
 body {
@@ -95,22 +94,24 @@ nav #socialmedia img {
 }
 
 #shelves {
+  outline: 2px solid;
   position: absolute;
   bottom: 40px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 #shelves img {
+  outline: 2px solid;
   width: 850px;
 }
 
 .dock {
   position: absolute;
-  bottom: 75px;
-  right: 0;
+  bottom: 90px;
   left: 0;
+  right: 0;
   text-align: center;
   background-color: transparent;
   z-index: 0;
@@ -127,8 +128,8 @@ nav #socialmedia img {
 }
 
 .dock li:nth-last-child(n+2):hover {
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
 }
 
 .dock li:nth-child(1):hover ~ .last img:nth-child(1),
@@ -138,8 +139,8 @@ nav #socialmedia img {
 .dock li:nth-child(5):hover ~ .last img:nth-child(5),
 .dock li:nth-child(6):hover ~ .last img:nth-child(6),
 .dock li:nth-child(7):hover ~ .last img:nth-child(7) {
-  width: 128px;
-  height: 128px;
+  width: 120px;
+  height: 120px;
 }
 
 .dock li:nth-child(1):hover ~ .last img:nth-child(2),
@@ -154,8 +155,8 @@ nav #socialmedia img {
 .dock li:nth-child(5):hover ~ .last img:nth-child(6),
 .dock li:nth-child(6):hover ~ .last img:nth-child(5),
 .dock li:nth-child(6):hover ~ .last img:nth-child(7) {
-  width: 70px;
-  height: 70px;
+  width: 95px;
+  height: 95px;
 }
 
 .dock li {
@@ -181,10 +182,11 @@ nav #socialmedia img {
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  text-align: center;
   padding: 0.3rem 0.9rem;
   border-radius: 12px;
   background-color: #dbdbdb;
@@ -241,6 +243,7 @@ nav #socialmedia img {
 #folder .folder-container a {
   display: block;
   text-align: center;
+  text-decoration: none;
   margin-top: 10px;
 }
 
