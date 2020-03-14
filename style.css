@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #efefef;
+  background: #fcfcfc;
   background-image: linear-gradient(rgba(32, 32, 32, 0.2) 1px, transparent 0), linear-gradient(90deg, rgba(32, 32, 32, 0.2) 1px, transparent 0);
   background-size: 30px 30px, 30px 30px;
   width: 100%;
@@ -79,6 +79,14 @@ nav #socialmedia img {
   width: 22px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+nav #socialmedia span {
+  margin-left: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 10px;
+  color: #fff;
 }
 
 .bgpic {
@@ -312,7 +320,7 @@ nav #socialmedia img {
 
 /*--Dock-- */
 footer {
-  bottom: 0;
+  bottom: 8%;
   display: inline-block;
   height: 4.4em;
   left: 50%;
@@ -327,11 +335,11 @@ footer {
 }
 
 footer:before {
-  background: -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), to(#a3a3a3));
-  background: linear-gradient(to top, #e6e6e6 0%, #a3a3a3 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#c6c6c6));
+  background: linear-gradient(to top, #ffffff 0%, #c6c6c6 100%);
   bottom: 0;
   content: '';
-  height: 4em;
+  height: 5em;
   left: 0;
   margin-top: 15px;
   position: absolute;
@@ -392,10 +400,6 @@ footer li:hover:before {
   opacity: 1;
   top: -45px;
   visibility: visible;
-}
-
-.jump {
-  -webkit-animation: JUMP 600ms 2 cubic-bezier(0.4, 0.01, 0.6, 0.99);
 }
 
 footer img {
