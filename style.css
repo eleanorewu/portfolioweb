@@ -81,20 +81,199 @@ nav #socialmedia img {
      object-fit: cover;
 }
 
-#desktop {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -40%);
-          transform: translate(-50%, -40%);
+.bgpic {
+  width: 630px;
+  height: 575px;
+  position: relative;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#desktop img {
-  width: 500px;
+.bgpic img.mainpic {
+  width: 420px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bgpic .circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bgpic .lg-circle {
+  width: 170px;
+  height: 170px;
+  background-color: #d9a78d;
+  right: 30px;
+  -webkit-animation: cir1 2s infinite;
+          animation: cir1 2s infinite;
+}
+
+.bgpic .md-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #bac4d3;
+  left: 70px;
+  -webkit-animation: cir2 2s infinite;
+          animation: cir2 2s infinite;
+}
+
+.bgpic .sm-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #f48f8c;
+  left: 90px;
+  -webkit-animation: cir3 2s infinite;
+          animation: cir3 2s infinite;
+}
+
+.bgpic .flower {
+  width: 160px;
+  height: 200px;
+  background-image: url("./bg-imgs/bg-flower.png");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-animation: flower 2s infinite;
+          animation: flower 2s infinite;
+}
+
+@-webkit-keyframes cir1 {
+  0% {
+    top: 80px;
+  }
+  50% {
+    top: 120px;
+  }
+  100% {
+    top: 80px;
+  }
+}
+
+@keyframes cir1 {
+  0% {
+    top: 80px;
+  }
+  50% {
+    top: 120px;
+  }
+  100% {
+    top: 80px;
+  }
+}
+
+@-webkit-keyframes cir2 {
+  0% {
+    top: 360px;
+  }
+  25% {
+    top: 390px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    top: 375px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    top: 360px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes cir2 {
+  0% {
+    top: 360px;
+  }
+  25% {
+    top: 390px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    top: 375px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    top: 360px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes cir3 {
+  0% {
+    bottom: 50px;
+  }
+  25% {
+    bottom: 70px;
+  }
+  50% {
+    bottom: 60px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+
+@keyframes cir3 {
+  0% {
+    bottom: 50px;
+  }
+  25% {
+    bottom: 70px;
+  }
+  50% {
+    bottom: 60px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+
+@-webkit-keyframes flower {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes flower {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
 }
 
 #shelves {
-  outline: 2px solid;
   position: absolute;
   bottom: 40px;
   left: 0;
@@ -103,7 +282,6 @@ nav #socialmedia img {
 }
 
 #shelves img {
-  outline: 2px solid;
   width: 850px;
 }
 
@@ -228,11 +406,20 @@ nav #socialmedia img {
 }
 
 #folder {
-  position: absolute;
-  right: 20px;
+  width: 85px;
+  height: 630px;
+  outline: 2px solid #f99;
+  position: relative;
+  margin-top: -650px;
+  margin-left: 95%;
 }
 
 #folder .folder-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];

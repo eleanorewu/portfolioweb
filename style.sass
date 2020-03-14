@@ -1,3 +1,7 @@
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
 *
     margin: 0
     padding: 0
@@ -66,24 +70,99 @@ nav
             object-fit: cover
 
 // 桌面圖
-#desktop
+.bgpic 
+  +size(630px,575px)
+  position: relative
+  margin-top: 100px
+  margin-left: auto
+  margin-right: auto
+  
+
+  & img.mainpic
+    +size(420px,500px)
+    object-fit: cover
     position: absolute
-    top: 40%
+    top: 50%
     left: 50%
-    transform: translate(-50%, -40%)
-    & img
-        width: 500px
+    transform: translate(-50%,-50%)
+  & .circle
+    position: absolute
+    border-radius: 50%
+  & .lg-circle
+    +size(170px,170px)
+    background-color: #d9a78d
+    // top: 80px
+    right: 30px
+    animation: cir1 2s infinite
+  & .md-circle
+    +size(60px,60px)
+    background-color: #bac4d3
+    left: 70px
+    animation: cir2 2s infinite
+  & .sm-circle
+    +size(40px,40px)
+    background-color: #f48f8c
+    // bottom: 50px
+    left: 90px
+    animation: cir3 2s infinite
+  & .flower
+    +size(160px,200px)
+    background-image: url("./bg-imgs/bg-flower.png")
+    background-size: cover
+    background-position: center center
+    position: absolute
+    bottom: 0
+    right: 0
+    animation: flower 2s infinite
+    
+//  背景圖動畫   
+@keyframes cir1
+  0%
+    top: 80px
+  50%
+    top: 120px
+  100%
+    top: 80px
+  
+@keyframes cir2
+  0%
+    top: 360px
+  25%
+    top: 390px
+    transform: scale(1)
+  50%
+    top: 375px
+    transform: scale(0.8)
+  100%
+    top: 360px 
+    transform: scale(1)
+
+@keyframes cir3
+  0%
+    bottom: 50px
+  25%
+    bottom: 70px
+  50%
+    bottom: 60px 
+  100%
+    bottom: 50px
+
+@keyframes flower
+  0%
+    transform: rotate(10deg)
+  50%
+    transform: rotate(-10deg)
+  100%
+    transform: rotate(10deg)
 
 // 放app的層架
 #shelves
-    outline: 2px solid
     position: absolute
     bottom: 40px
     left: 0
     right: 0
     text-align: center
     & img
-        outline: 2px solid
         width: 850px
 // dock
 .dock
@@ -99,7 +178,6 @@ nav
     display: inline-block
     position: relative
     z-index: 1 
-    // outline: 1px solid #f00
     width: 70px
     height: 70px
     transition: width 0.5s,height 0.5s
@@ -191,9 +269,17 @@ nav
     transition: width 0.5s,height 0.5s
 // 資料夾
 #folder
-    position: absolute
-    right: 20px
+    +size(85px,630px)
+    outline: 2px solid #f99
+    position: relative
+    margin-top: -650px
+    margin-left: 95%
     & .folder-container
+        // outline: 2px solid #f99
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
         display: grid
         grid-template-columns: repeat(1, 1fr)
         margin-top: 30px
