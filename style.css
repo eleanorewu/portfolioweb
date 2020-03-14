@@ -403,17 +403,16 @@ footer li:hover:before {
 }
 
 footer img {
-  -webkit-box-reflect: below -5px -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(230, 230, 230, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 5px;
   position: relative;
   -webkit-transform: scale(1);
