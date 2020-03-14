@@ -3,77 +3,77 @@
   height: $h
 
 *
-    margin: 0
-    padding: 0
-    color: black
+  margin: 0
+  padding: 0
+  color: black
     
 
 // 背景底
 body
-    background: #fcfcfc
-    background-image: linear-gradient(rgba(32, 32, 32, 0.2) 1px, transparent 0),linear-gradient(90deg, rgba(32, 32, 32, 0.2) 1px, transparent 0)
-    background-size: 30px 30px, 30px 30px
-    width: 100%
-    height: 100vh
+  background: #fcfcfc
+  background-image: linear-gradient(rgba(32, 32, 32, 0.2) 1px, transparent 0),linear-gradient(90deg, rgba(32, 32, 32, 0.2) 1px, transparent 0)
+  background-size: 30px 30px, 30px 30px
+  width: 100%
+  height: 100vh
 
 // 仿電腦工具列
 nav
-    background: #763032
-    height: 35px
+  background: #763032
+  height: 35px
+  width: 100%
+  top: 0
+  & #toolbar
+    display: inline-block
+    position: relative
     width: 100%
-    top: 0
-    & #toolbar
+    height: 35px
+    & img
+      position: absolute
+      top: 2px
+      width: 130px
+      margin-left: 15px
+
+    & ul
+      list-style: none
+      position: absolute
+      top: 5px
+      left: 145px
+      & li
         display: inline-block
-        position: relative
-        width: 100%
-        height: 35px
-        & img
-            position: absolute
-            top: 2px
-            width: 130px
-            margin-left: 15px
-
-        & ul
-            list-style: none
-            position: absolute
-            top: 5px
-            left: 145px
-            & li
-                display: inline-block
-                & a
-                    text-decoration: none
-                    color: #fff
-                    margin-left: 12px
-                    font-weight: 600
-                    font-family: 微軟正黑體
-                    font-size: 14px
-                    letter-spacing: 1px
-
-                &:hover
-                    opacity: 0.6
-
-    #socialmedia
-        display: inline-block
-        position: absolute
-        height: 35px
-        top: 0
-        left: 85%
         & a
-            margin-top: 5px
-            margin-left: 3px
-            width: 28px
+          text-decoration: none
+          color: #fff
+          margin-left: 12px
+          font-weight: 600
+          font-family: 微軟正黑體
+          font-size: 14px
+          letter-spacing: 1px
 
-        & img
-            margin-left: 5px
-            margin-top: 3px
-            width: 22px
-            object-fit: cover
-        & span
-            margin-left: 25px
-            margin-top: auto
-            margin-bottom: auto
-            font-size: 10px
-            color: #fff
+        &:hover
+          opacity: 0.6
+
+  #socialmedia
+    display: inline-block
+    position: absolute
+    height: 35px
+    top: 0
+    left: 85%
+    & a
+      margin-top: 5px
+      margin-left: 3px
+      width: 28px
+
+    & img
+      margin-left: 5px
+      margin-top: 3px
+      width: 22px
+      object-fit: cover
+    & span
+      margin-left: 25px
+      margin-top: auto
+      margin-bottom: auto
+      font-size: 10px
+      color: #fff
 
 // 桌面圖
 .bgpic 
@@ -163,134 +163,121 @@ nav
 
 // 資料夾
 #folder
-    +size(85px,630px)
-    position: relative
-    margin-top: -650px
-    left: 95%
-    & .folder-container
-        // outline: 2px solid #f99
-        position: absolute
-        top: 0
-        left: 50%
-        transform: translateX(-50%)
-        display: grid
-        grid-template-columns: repeat(1, 1fr)
-        margin-top: 30px
-        & a
-            display: block
-            text-align: center
-            text-decoration: none
-            margin-top: 10px
-            & img
-                display: block
-                width: 70px
+  +size(85px,630px)
+  position: relative
+  margin-top: -650px
+  left: 95%
+  & .folder-container
+    // outline: 2px solid #f99
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    margin-top: 30px
+    & a
+      display: block
+      text-align: center
+      text-decoration: none
+      margin-top: 10px
+      & img
+        display: block
+        width: 70px
 
-            & span
-                text-decoration: none
+      & span
+        text-decoration: none
 
 /*--Dock--
 
 footer
-    bottom: 8%
-    display: inline-block
-    height: 4.4em
-    left: 50%
-    min-width: 35em
-    padding: 0 10px
-    -webkit-perspective: 1000px
-    perspective: 1000px
+  bottom: 8%
+  display: inline-block
+  height: 4.4em
+  left: 50%
+  min-width: 35em
+  padding: 0 10px
+  perspective: 1000px
+  position: absolute
+  text-align: center
+  transform: translatex(-50%)
+
+  &:before
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#c6c6c6))
+    background: linear-gradient(to top, #ffffff 0%, #c6c6c6 100%)
+    bottom: 0
+    content: ''
+    height: 5em
+    left: 0
+    margin-top: 15px
     position: absolute
-    text-align: center
-    -webkit-transform: translatex(-50%)
-    transform: translatex(-50%)
+    right: 0
+    top: 0
+    transform: rotatex(45deg)
+    width: 100%
+    z-index: -1
 
+  ul
+    display: inline-block
+    margin: 0 0.1em
+    padding: 0
+    transform-origin: bottom center !important
+
+  li
+    display: inline-block
+    vertical-align: top
+    position: relative
+    transform: scale(1)
+    transform-origin: bottom center
+    transition: -webkit-transform 2s
+    transition: transform 2s
+    transition: transform 2s, -webkit-transform 2s
+    // app名稱
     &:before
-        background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#c6c6c6))
-        background: linear-gradient(to top, #ffffff 0%, #c6c6c6 100%)
-        bottom: 0
-        content: ''
-        height: 5em
-        left: 0
-        margin-top: 15px
-        position: absolute
-        right: 0
-        top: 0
-        -webkit-transform: rotatex(45deg)
-        transform: rotatex(45deg)
-        width: 100%
-        z-index: -1
+      background: rgba(0, 0, 0, 0.3)
+      border-radius: 12px
+      color: #fff
+      content: attr(data-title)
+      display: block
+      float: left
+      font-size: 0.9em
+      left: 50%
+      margin: 2px auto
+      opacity: 0
+      padding: 0 10px
+      position: absolute
+      text-align: center
+      top: -35px
+      transform: translatex(-50%)
+      transform-origin: bottom center !important
+      visibility: hidden
+      width: auto
 
-    ul
-        display: inline-block
-        margin: 0 0.1em
-        padding: 0
-        -webkit-transform-origin: bottom center !important
-        transform-origin: bottom center !important
-
-    li
-        display: inline-block
-        vertical-align: top
-        position: relative
-        -webkit-transform: scale(1)
-        transform: scale(1)
-        -webkit-transform-origin: bottom center
-        transform-origin: bottom center
-        -webkit-transition: -webkit-transform 2s
-        transition: -webkit-transform 2s
-        transition: transform 2s
-        transition: transform 2s, -webkit-transform 2s
-
-        &:before
-            background: rgba(0, 0, 0, 0.3)
-            border-radius: 12px
-            color: #fff
-            content: attr(data-title)
-            display: block
-            float: left
-            font-size: 0.9em
-            left: 50%
-            margin: 2px auto
-            opacity: 0
-            padding: 0 10px
-            position: absolute
-            text-align: center
-            top: -35px
-            -webkit-transform: translatex(-50%)
-            transform: translatex(-50%)
-            -webkit-transform-origin: bottom center !important
-            transform-origin: bottom center !important
-            visibility: hidden
-            width: auto
-
-        &:hover:before
-            opacity: 1
-            top: -45px
-            visibility: visible
+    &:hover:before
+      opacity: 1
+      top: -45px
+      visibility: visible
 
 
 footer img
-    -webkit-box-reflect: below -5px -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(230, 230, 230, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)))
-    -webkit-box-align: center
-    -ms-flex-align: center
-    align-items: center
-    bottom: 0
-    display: -webkit-box
-    display: -ms-flexbox
-    display: flex
-    -webkit-box-pack: center
-    -ms-flex-pack: center
-    justify-content: center
-    margin: 0 5px
-    position: relative
-    -webkit-transform: scale(1)
-    transform: scale(1)
-    -webkit-transform-origin: bottom center !important
-    transform-origin: bottom center !important
-    -webkit-transition: all 0.2s
-    transition: all 0.2s
-    width: 4em
+  -webkit-box-reflect: below -5px -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(230, 230, 230, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)))
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  bottom: 0
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  margin: 0 5px
+  position: relative
+  transform: scale(1)
+  transform-origin: bottom center !important
+  transition: all 0.2s
+  width: 4em
 
-    &:hover
-        margin: 0 10px
-        -webkit-transform: scale(1.2)
-        transform: scale(1.2)
+  &:hover
+    margin: 0 10px
+    transform: scale(1.2)
