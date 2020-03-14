@@ -273,138 +273,6 @@ nav #socialmedia img {
   }
 }
 
-#shelves {
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-#shelves img {
-  width: 850px;
-}
-
-.dock {
-  position: absolute;
-  bottom: 90px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  background-color: transparent;
-  z-index: 0;
-}
-
-.dock li:nth-last-child(n+2) {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  width: 70px;
-  height: 70px;
-  -webkit-transition: width 0.5s,height 0.5s;
-  transition: width 0.5s,height 0.5s;
-}
-
-.dock li:nth-last-child(n+2):hover {
-  width: 120px;
-  height: 120px;
-}
-
-.dock li:nth-child(1):hover ~ .last img:nth-child(1),
-.dock li:nth-child(2):hover ~ .last img:nth-child(2),
-.dock li:nth-child(3):hover ~ .last img:nth-child(3),
-.dock li:nth-child(4):hover ~ .last img:nth-child(4),
-.dock li:nth-child(5):hover ~ .last img:nth-child(5),
-.dock li:nth-child(6):hover ~ .last img:nth-child(6),
-.dock li:nth-child(7):hover ~ .last img:nth-child(7) {
-  width: 120px;
-  height: 120px;
-}
-
-.dock li:nth-child(1):hover ~ .last img:nth-child(2),
-.dock li:nth-child(7):hover ~ .last img:nth-child(6),
-.dock li:nth-child(2):hover ~ .last img:nth-child(1),
-.dock li:nth-child(2):hover ~ .last img:nth-child(3),
-.dock li:nth-child(3):hover ~ .last img:nth-child(2),
-.dock li:nth-child(3):hover ~ .last img:nth-child(4),
-.dock li:nth-child(4):hover ~ .last img:nth-child(3),
-.dock li:nth-child(4):hover ~ .last img:nth-child(5),
-.dock li:nth-child(5):hover ~ .last img:nth-child(4),
-.dock li:nth-child(5):hover ~ .last img:nth-child(6),
-.dock li:nth-child(6):hover ~ .last img:nth-child(5),
-.dock li:nth-child(6):hover ~ .last img:nth-child(7) {
-  width: 95px;
-  height: 95px;
-}
-
-.dock li {
-  margin-right: 15px;
-}
-
-.dock li:hover .tooltip {
-  opacity: 1;
-}
-
-.dock li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-/* Tooltips */
-.dock li .tooltip {
-  opacity: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[7];
-      grid-template-columns: repeat(7, 1fr);
-  position: absolute;
-  top: -45px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  text-align: center;
-  padding: 0.3rem 0.9rem;
-  border-radius: 12px;
-  background-color: #dbdbdb;
-  font-size: 0.8rem;
-  font-weight: bold;
-  pointer-events: none;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  z-index: 2;
-}
-
-.dock li .tooltip:after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #dbdbdb transparent transparent transparent;
-}
-
-.dock .last {
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  text-align: center;
-}
-
-.dock img {
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-  -webkit-transition: width 0.5s,height 0.5s;
-  transition: width 0.5s,height 0.5s;
-}
-
 #folder {
   width: 85px;
   height: 630px;
@@ -442,15 +310,120 @@ nav #socialmedia img {
   text-decoration: none;
 }
 
+/*--Dock-- */
 footer {
-  position: absolute;
-  bottom: 5px;
+  bottom: 0;
+  display: inline-block;
+  height: 4.4em;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  min-width: 35em;
+  padding: 0 10px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  text-align: center;
+  -webkit-transform: translatex(-50%);
+  transform: translatex(-50%);
 }
 
-footer p {
+footer:before {
+  background: -webkit-gradient(linear, left bottom, left top, from(#e6e6e6), to(#a3a3a3));
+  background: linear-gradient(to top, #e6e6e6 0%, #a3a3a3 100%);
+  bottom: 0;
+  content: '';
+  height: 4em;
+  left: 0;
+  margin-top: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotatex(45deg);
+  transform: rotatex(45deg);
   width: 100%;
+  z-index: -1;
+}
+
+footer ul {
+  display: inline-block;
+  margin: 0 0.1em;
+  padding: 0;
+  -webkit-transform-origin: bottom center !important;
+  transform-origin: bottom center !important;
+}
+
+footer li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+footer li:before {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  color: #fff;
+  content: attr(data-title);
+  display: block;
+  float: left;
+  font-size: 0.9em;
+  left: 50%;
+  margin: 2px auto;
+  opacity: 0;
+  padding: 0 10px;
+  position: absolute;
+  text-align: center;
+  top: -35px;
+  -webkit-transform: translatex(-50%);
+  transform: translatex(-50%);
+  -webkit-transform-origin: bottom center !important;
+  transform-origin: bottom center !important;
+  visibility: hidden;
+  width: auto;
+}
+
+footer li:hover:before {
+  opacity: 1;
+  top: -45px;
+  visibility: visible;
+}
+
+.jump {
+  -webkit-animation: JUMP 600ms 2 cubic-bezier(0.4, 0.01, 0.6, 0.99);
+}
+
+footer img {
+  -webkit-box-reflect: below -5px -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(230, 230, 230, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 5px;
+  position: relative;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: bottom center !important;
+  transform-origin: bottom center !important;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 4em;
+}
+
+footer img:hover {
+  margin: 0 10px;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 /*# sourceMappingURL=style.css.map */
