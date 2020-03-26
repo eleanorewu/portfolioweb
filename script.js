@@ -1,3 +1,17 @@
+// loader
+window.addEventListener("load", function(){
+            
+    var load_screen = document.getElementById("loader");
+     setTimeout(function(){
+    //     //document.body.removeChild(load_screen);
+           document.getElementById("loader").style.opacity = '0';
+       },3000);
+  
+        setTimeout(function(){
+            document.getElementById("loader").style.display = 'none';
+        },4000);  
+  });
+
 //Clock;
 function updateClock() {
     var currentTime = new Date();

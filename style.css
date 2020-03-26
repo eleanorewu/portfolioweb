@@ -5,6 +5,17 @@
   color: black;
 }
 
+/*PRELOADER*/
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  overflow: visible;
+  background: #fff url("loader.gif") no-repeat center center;
+  background-size: 20%;
+}
+
 body {
   background: #fcfcfc;
   background-image: linear-gradient(rgba(32, 32, 32, 0.2) 1px, transparent 0), linear-gradient(90deg, rgba(32, 32, 32, 0.2) 1px, transparent 0);
@@ -84,7 +95,6 @@ nav #socialmedia img {
 nav #socialmedia span {
   margin-left: 25px;
   font-size: 12px;
-  outline: 1px solid #fff;
   color: #fff;
 }
 
