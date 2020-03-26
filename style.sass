@@ -212,17 +212,16 @@ footer
   transform: translatex(-50%)
 
   &:before
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#c6c6c6))
-    background: linear-gradient(to top, #ffffff 0%, #c6c6c6 100%)
+    background: rgba(164, 164, 164, 0.7)
     bottom: 0
     content: ''
     height: 5em
     left: 0
     margin-top: 15px
     position: absolute
+    border-radius: 20px
     right: 0
-    top: 0
-    transform: rotatex(45deg)
+    top: 10
     width: 100%
     z-index: -1
 
@@ -243,9 +242,9 @@ footer
     transition: transform 2s, -webkit-transform 2s
     // app名稱
     &:before
-      background: rgba(0, 0, 0, 0.3)
+      background: rgba(148, 148, 148, 0.3)
       border-radius: 12px
-      color: #fff
+      color: #000
       content: attr(data-title)
       display: block
       float: left
