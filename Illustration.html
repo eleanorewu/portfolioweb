@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- favicon.ico -->
+    <link rel="shortcut icon" href="./bg-imgs/favicon.ico" type="icon">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- 指定螢幕寬度為裝置寬度，畫面載入初始縮放比例 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!--  nav 工具列 -->
+    <header>
+            <div class="container">
+                <nav>
+                    <input type="checkbox" id="nav" class="hidden">
+                    <label for="nav" class="nav-btn">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </label>
+                    <div class="logo">
+                        <a href="index.html"><img src="./bg-imgs/eleanore.png" alt="logo"></a>
+                    </div>
+                    <div class="nav-wrapper">
+                        <ul>
+                            <li><a href="Illustration.html">Illustration</a></li>
+                            <li><a href="#">Web</a></li>
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="https://uie-823.github.io/My_Resume_Web/">About me</a></li>
+                        </ul>
+                    </div>
+                    <div class="time">
+                        <span id="clock"></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <div class="gallery-section">
+        <div class="inner-width">
+            <h1>My Gallery</h1>
+            <div class="border"></div>
+            <div class="gallery">
+                <a href="./illustration/01.jpg" class="image">
+                    <img src="./illustration/01.jpg" alt="">
+                </a>
+
+                <a href="./illustration/02.jpg" class="image">
+                    <img src="./illustration/02.jpg" alt="">
+                </a>
+
+                <a href="./illustration/03.jpg" class="image">
+                    <img src="./illustration/03.jpg" alt="">
+                </a>
+
+                <a href="./illustration/04.jpg" class="image">
+                    <img src="./illustration/04.jpg" alt="">
+                </a>
+
+                <a href="./illustration/05.jpg" class="image">
+                    <img src="./illustration/05.jpg" alt="">
+                </a>
+
+                <a href="./illustration/06.jpg" class="image">
+                    <img src="./illustration/06.jpg" alt="">
+                </a>
+
+                <a href="./illustration/07.jpg" class="image">
+                    <img src="./illustration/07.jpg" alt="">
+                </a>
+
+                <a href="./illustration/08.jpg" class="image">
+                    <img src="./illustration/08.jpg" alt="">
+                </a>
+
+                <a href="./illustration/09.jpg" class="image">
+                    <img src="./illustration/09.jpg" alt="">
+                </a>
+
+                <a href="./illustration/10.jpg" class="image">
+                    <img src="./illustration/10.jpg" alt="">
+                </a>
+
+                <a href="./illustration/11.jpg" class="image">
+                    <img src="./illustration/11.jpg" alt="">
+                </a>
+
+                <a href="./illustration/12.jpg" class="image">
+                    <img src="./illustration/12.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright &copy; Eleanore 2020.All Rights Reserved.</p>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(".gallery").magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    </script>
+</body>
+
+</html>
