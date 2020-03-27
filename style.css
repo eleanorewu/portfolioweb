@@ -495,7 +495,7 @@ nav .time span {
 /*--Dock-- */
 footer {
   position: fixed;
-  bottom: 4%;
+  bottom: 10%;
   display: inline-block;
   height: 4.4em;
   left: 50%;
@@ -573,6 +573,16 @@ footer li:hover:before {
   opacity: 1;
   top: -45px;
   visibility: visible;
+}
+
+footer p {
+  margin-top: 33px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 5px;
+  color: #763032;
 }
 
 footer img {
