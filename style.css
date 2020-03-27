@@ -9,6 +9,7 @@
 /*PRELOADER*/
 #loader {
   position: fixed;
+  top: 0;
   width: 100%;
   height: 100vh;
   z-index: 1;
@@ -28,7 +29,6 @@ body {
 
 header {
   width: 100%;
-  background-color: #763032;
 }
 
 .logo {
@@ -44,6 +44,10 @@ header {
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #763032;
   padding: 8px;
   height: 25px;
   z-index: 2;
@@ -243,9 +247,9 @@ nav .time span {
 
 .bgpic {
   width: 630px;
-  height: 575px;
+  height: 550px;
   position: relative;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -472,7 +476,7 @@ nav .time span {
 
 /*--Dock-- */
 footer {
-  bottom: 8%;
+  bottom: 4%;
   display: inline-block;
   height: 4.4em;
   left: 50%;
@@ -636,6 +640,7 @@ footer img:hover {
 
 .footer {
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
