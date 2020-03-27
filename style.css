@@ -15,7 +15,6 @@
   z-index: 1;
   overflow: visible;
   background: #fff url("loader.gif") no-repeat center center;
-  background-size: 20%;
   text-align: center;
 }
 
@@ -252,7 +251,7 @@ nav .time span {
   width: 630px;
   height: 550px;
   position: fixed;
-  margin-top: 80px;
+  margin-top: 95px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
