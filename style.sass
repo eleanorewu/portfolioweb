@@ -94,6 +94,8 @@ nav .time
 
 
 @media screen and (max-width: 864px)
+  #folder
+    opacity: 0
   nav
     height: 25px
 
@@ -298,9 +300,9 @@ nav .time
 // 資料夾
 #folder
   +size(85px,630px)
-  position: relative
-  margin-top: -650px
-  left: 95%
+  position: fixed
+  top: 10%
+  left: 30px
   & .folder-container
     // outline: 2px solid #f99
     position: absolute
@@ -315,12 +317,22 @@ nav .time
       text-align: center
       text-decoration: none
       margin-top: 10px
+
       & img
         display: block
         width: 70px
-
       & span
         text-decoration: none
+        padding: 2px 10px
+        font-size: 10px
+        font-weight: 600
+    & a:active img
+      background: rgba(164, 164, 164, 0.7)
+      border-radius: 5px
+    & a:active span
+      background: rgba(37, 55, 114, 0.7)
+      color: #fff
+      border-radius: 20px
 
 /*--Dock--
 
