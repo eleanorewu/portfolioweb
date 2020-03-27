@@ -18,24 +18,33 @@
 <body>
     <!-- PRELOADER -->
     <div id="loader"></div>
-    <!-- 工具列 -->
-    <nav>
-        <div id="toolbar">
-            <a href="#"><img src="./bg-imgs/eleanore.png" alt="logo"></a>
-            <ul>
-                <li><a href="#">File</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </div>
-        <div id="socialmedia">
-            <a href="#"><img src="./icon/ig-icon.png" alt=""></a>
-            <a href="#"><img src="./icon/mail-icon.png" alt=""></a>
-            <img src="./icon/wifi-icon.png" alt=""></a>
-            <img src="./icon/battery-icon.png" alt=""></a>
-            <!-- 加入當前時間 -->
-            <span id="clock"></span>
-        </div>
-    </nav>
+    <!--  nav 工具列 -->
+    <header>
+        <div class="container">
+              <nav>
+                 <input type="checkbox" id="nav" class="hidden">
+                 <label for="nav" class="nav-btn">
+                     <i></i>
+                     <i></i>
+                     <i></i>
+                 </label>
+                 <div class="logo">
+                    <a href="#"><img src="./bg-imgs/eleanore.png" alt="logo"></a>
+                 </div>
+                 <div class="nav-wrapper">
+                     <ul>
+                         <li><a href="#">Home</a></li>
+                         <li><a href="#">Overview</a></li>
+                         <li><a href="#">Prices</a></li>
+                         <li><a href="#">Purchase</a></li>
+                     </ul>
+                 </div>
+                 <div class="time">
+                    <span id="clock"></span>
+                </div>
+              </nav>
+          </div>
+      </header>
     <!-- 桌面圖片 -->
     <div class="bgpic"> <img class="mainpic" src="./bg-imgs/bg-main-pic.png" alt="" />
         <div class="circle lg-circle"></div>

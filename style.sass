@@ -25,65 +25,179 @@ body
   height: 100vh
 
 // 仿電腦工具列
-nav
-  background: #763032
-  height: 35px
-  width: 100%
-  top: 0
-  & #toolbar
-    display: inline-block
-    position: relative
-    width: 100%
-    height: 35px
-    & img
-      position: absolute
-      top: 2px
-      width: 130px
-      margin-left: 15px
-
-    & ul
-      list-style: none
-      position: absolute
-      top: 5px
-      left: 145px
-      & li
-        display: inline-block
-        & a
-          text-decoration: none
-          color: #fff
-          margin-left: 12px
-          font-weight: 600
-          font-family: 微軟正黑體
-          font-size: 14px
-          letter-spacing: 1px
-
-        &:hover
-          opacity: 0.6
-
-  & #socialmedia
-    display: inline-block
+.logo
+  position: fixed
+  top: 8px
+  left: 10px
+  & img
     position: absolute
-    height: 35px
-    top: 0
-    left: 85%
-    & a
-      margin-top: 5px
-      margin-left: 3px
-      width: 28px
+    top: -2px
+    width: 120px
+    
 
-    & img
-      margin-left: 5px
-      margin-top: 3px
-      width: 22px
-      object-fit: cover
-    & span
-      margin-left: 25px
-      // margin-top: 5px
-      // margin-bottom: 5px
-      font-size: 12px
-      // outline: 1px solid #fff
-      color: #fff
+nav
+  padding: 8px
+  background-color: #763032
+  height: 25px
+  z-index: 2
 
+  ul
+    position: fixed
+    top: 8px
+    left: 160px
+
+    li
+      display: inline-block
+      float: left
+
+      a
+        display: inline-block
+        outline: none
+        color: #fff
+        text-transform: uppercase
+        text-decoration: none
+        font-size: 12px
+        letter-spacing: 1.2px
+        font-weight: 700
+        transition-duration: 0.8s
+      a:hover
+        transform: scale(1.05)
+        color: #bee4ff
+
+nav ul li
+  &:not(:first-child)
+    margin-left: 30px
+
+  &:last-child
+    margin-right: 15px
+
+nav .time
+  position: fixed
+  top: 10px
+  right: 50px
+  
+  & span
+    font-size: 16px
+    font-weight: 500
+    letter-spacing: 1px
+    color: #fff
+
+
+@media screen and (max-width: 864px)
+  nav
+    height: 25px
+
+  .nav-wrapper
+    position: fixed
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    z-index: -1
+    background: #fcfcfc
+    background-image: linear-gradient(rgba(32, 32, 32, 0.2) 1px, transparent 0), linear-gradient(90deg, rgba(32, 32, 32, 0.2) 1px, transparent 0)
+    background-size: 30px 30px, 30px 30px
+    opacity: 0
+    -webkit-transition: all 0.2s ease
+    transition: all 0.2s ease
+
+    ul
+      position: fixed
+      width: 100%
+      top: 40%
+      left: 0px
+      transform: translateY(-40%)
+
+      li
+        display: block
+        float: none
+        width: 100%
+        text-align: right
+        margin-bottom: 10px
+
+        &:nth-child(1) a
+          transition-delay: 0.2s
+
+        &:nth-child(2) a
+          transition-delay: 0.3s
+
+        &:nth-child(3) a
+          transition-delay: 0.4s
+
+        &:nth-child(4) a
+          transition-delay: 0.5s
+
+        &:not(:first-child)
+          margin-left: 0
+
+        a
+          padding: 10px 24px
+          opacity: 0
+          color: #763032
+          font-size: 16px
+          font-weight: 800
+          letter-spacing: 1.2px
+          transform: translateX(-20px)
+          transition: all 0.2s ease
+
+  .nav-btn
+    position: fixed
+    right: 20px
+    top: -2px
+    display: block
+    width: 25px
+    height: 25px
+    cursor: pointer
+    z-index: 9999
+    border-radius: 50%
+
+    i
+      display: block
+      width: 20px
+      height: 2px
+      background: #fff
+      border-radius: 2px
+      margin-left: 14px
+
+      &:nth-child(1)
+        margin-top: 16px
+
+      &:nth-child(2)
+        margin-top: 4px
+        opacity: 1
+
+      &:nth-child(3)
+        margin-top: 4px
+
+#nav:checked
+  + .nav-btn
+    -webkit-transform: rotate(45deg)
+    transform: rotate(45deg)
+
+    i
+      background: #763032
+      transition: transform 0.2s ease
+      transition: (transform 0.2s ease,)
+
+      &:nth-child(1)
+        transform: translateY(6px) rotate(180deg)
+
+      &:nth-child(2)
+        opacity: 0
+
+      &:nth-child(3)
+        transform: translateY(-6px) rotate(90deg)
+
+  ~ .nav-wrapper
+    z-index: 9990
+    opacity: 1
+
+    ul li a
+      opacity: 1
+      transform: translateX(0)
+
+.hidden
+  display: none
 // 桌面圖
 .bgpic 
   +size(630px,575px)
