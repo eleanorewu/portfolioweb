@@ -108,7 +108,7 @@ nav .time span {
   width: 630px;
   height: 550px;
   position: fixed;
-  margin-top: 95px;
+  top: 122px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -348,125 +348,100 @@ nav .time span {
   border-radius: 20px;
 }
 
-/*--Dock-- */
-footer {
+/*MAC DOCK */
+#dock {
   position: fixed;
-  bottom: 10%;
-  display: inline-block;
-  height: 4.4em;
+  text-align: center;
   left: 50%;
-  min-width: 35em;
-  padding: 0 10px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  position: absolute;
-  text-align: center;
-  -webkit-transform: translatex(-50%);
-          transform: translatex(-50%);
-}
-
-footer:before {
-  background: rgba(164, 164, 164, 0.7);
-  bottom: 0;
-  content: '';
-  height: 5em;
-  left: 0;
-  margin-top: 15px;
-  position: absolute;
-  border-radius: 20px;
-  right: 0;
-  top: 10;
-  width: 100%;
-  z-index: -1;
-}
-
-footer ul {
-  display: inline-block;
-  margin: 0 0.1em;
-  padding: 0;
-  -webkit-transform-origin: bottom center !important;
-          transform-origin: bottom center !important;
-}
-
-footer li {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
-  transition: -webkit-transform 2s;
-  -webkit-transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
-}
-
-footer li:before {
-  background: rgba(148, 148, 148, 0.3);
-  border-radius: 12px;
-  color: #000;
-  content: attr(data-title);
-  display: block;
-  float: left;
-  font-size: 0.9em;
-  left: 50%;
-  margin: 2px auto;
-  opacity: 0;
-  padding: 0 10px;
-  position: absolute;
-  text-align: center;
-  top: -35px;
-  -webkit-transform: translatex(-50%);
-          transform: translatex(-50%);
-  -webkit-transform-origin: bottom center !important;
-          transform-origin: bottom center !important;
-  visibility: hidden;
-  width: auto;
-}
-
-footer li:hover:before {
-  opacity: 1;
-  top: -45px;
-  visibility: visible;
-}
-
-footer p {
-  margin-top: 33px;
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  padding: 5px;
-  color: #763032;
-}
-
-footer img {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  bottom: 0;
+  bottom: -50px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 5px;
-  position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: bottom center !important;
-          transform-origin: bottom center !important;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  width: 4em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99;
 }
 
-footer img:hover {
-  margin: 0 10px;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+#dock li {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+  padding: 0px 5px;
+}
+
+#dock li img {
+  width: 55px;
+  height: 55px;
+  -webkit-transition: all 0.3s;
+  -webkit-transform-origin: 40% 70%;
+}
+
+#dock li:hover img {
+  -webkit-transform: scale(2);
+  margin: 0 2em;
+}
+
+#dock li:hover + li img {
+  -webkit-transform: scale(1.5);
+  margin: 0 1.5em;
+}
+
+#dock li.prev img {
+  -webkit-transform: scale(1.5);
+  margin: 0 1.5em;
+}
+
+#dock li span {
+  font-family: 微軟正黑體;
+  display: none;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+  font-weight: 500;
+  padding: 4px 0;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+#dock li:hover span {
+  display: block;
+  color: #333;
+  background: rgba(191, 191, 191, 0.7);
+}
+
+#dock ul {
+  background: rgba(138, 138, 138, 0.7);
+  padding: 10px 20px;
+  border-radius: 20px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+
+p {
+  position: fixed;
+  right: -150px;
+  top: 40%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin: 5px;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #763032;
 }
 
 .inner-width {
@@ -539,6 +514,29 @@ footer img:hover {
     -webkit-box-flex: 33.33%;
         -ms-flex: 33.33%;
             flex: 33.33%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer:before {
+    width: 100%;
+  }
+  footer ul {
+    width: 550px;
+  }
+  footer img {
+    position: relative;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: bottom center !important;
+            transform-origin: bottom center !important;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    width: 3.5em;
+  }
+  footer img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -691,7 +689,7 @@ footer img:hover {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 655px) {
   .bgpic .lg-circle {
     display: none;
   }
@@ -707,6 +705,19 @@ footer img:hover {
   #folder {
     display: none;
   }
+  #dock {
+    width: 100%;
+  }
+  #dock ul {
+    border-radius: 0;
+  }
+  #dock li span {
+    font-size: 12px;
+  }
+  #dock li img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -716,6 +727,7 @@ footer img:hover {
             flex: 100%;
   }
   .bgpic {
+    top: 0;
     width: 100%;
     height: 100%;
     margin-top: 40px;
@@ -723,6 +735,14 @@ footer img:hover {
   img.mainpic {
     width: 100%;
     height: 100%;
+  }
+  #dock {
+    width: 100%;
+    height: 5em;
+  }
+  #dock li img {
+    width: 40px;
+    height: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

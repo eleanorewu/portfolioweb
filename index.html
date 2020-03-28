@@ -47,8 +47,8 @@
             </nav>
         </header>
         <!-- 桌面背景圖片 -->
-        <div class="bgpic"> 
-            <img class="mainpic" src="./bg-imgs/bg-main-pic.png" alt=""/>
+        <div class="bgpic">
+            <img class="mainpic" src="./bg-imgs/bg-main-pic.png" alt="" />
             <div class="circle lg-circle"></div>
             <div class="circle md-circle"></div>
             <div class="circle sm-circle"></div>
@@ -71,44 +71,54 @@
                 </a>
             </div>
         </section>
-        <!-- footer頁尾 仿dock -->
-        <footer>
+        <!--MAC DOCK-->
+        <div id="dock">
+
             <ul>
-                <li data-title="About&nbsp;me">
+
+                <li class="show" name="aboutme">
+                    <span>About me</span>
                     <a href="https://uie-823.github.io/My_Resume_Web/"><img src="./icon/aboutme-icon1.png"></a>
                 </li>
 
-                <li data-title="Illustration">
+                <li class="show" name="illustration">
+                    <span>Illustration</span>
                     <a href="illustration.html"><img src="./icon/illustration-icon.png"></a>
                 </li>
 
-                <li data-title="Photography">
+                <li class="show mail-attention" name="photography">
+                    <span>Photography</span>
                     <a href="#"><img src="./icon/photography-icon.png"></a>
                 </li>
 
-                <li data-title="Web">
+                <li class="show" name="web">
+                    <span>Web</span>
                     <a href="#"><img src="./icon/web-icon.png"></a>
                 </li>
 
-                <li data-title="Contact">
+                <li class="show" name="contact">
+                    <span>Contact</span>
                     <a href="mailto:yuenwu850823@gmail.com" target="_blank"><img src="./icon/contact.png"></a>
                 </li>
 
-                <li data-title="System&nbsp;Preferences">
+                <li class="show" name="system">
+                    <span>System</span>
                     <a href="#"><img src="./icon/dock-icon01.png"></a>
                 </li>
 
-                <li data-title="Trash">
+                <li class="show" name="trash">
+                    <span>Trash</span>
                     <a href="#"><img src="./icon/dock-icon02.png"></a>
                 </li>
 
             </ul>
-            <!-- 版權聲明 -->
-            <p>Copyright &copy; Eleanore 2020.All Rights Reserved.</p>
-        </footer>
 
+        </div>
+
+        <!-- 版權聲明 -->
+        <p>Copyright &copy; Eleanore 2020.All Rights Reserved.</p>
     </div>
-    </div>
+
 
     <!-- js檔＆jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
