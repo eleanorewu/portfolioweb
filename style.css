@@ -431,13 +431,15 @@ nav .time span {
   margin: 0;
 }
 
-p {
+.copyright {
   position: fixed;
-  right: -150px;
-  top: 40%;
+  right: -130px;
+  top: 45%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  margin: 5px;
+}
+
+.copyright p {
   font-size: 12px;
   letter-spacing: 2.5px;
   font-weight: 700;
@@ -712,7 +714,7 @@ p {
     border-radius: 0;
   }
   #dock li span {
-    font-size: 12px;
+    font-size: 0.9em;
   }
   #dock li img {
     width: 50px;
@@ -739,6 +741,9 @@ p {
   #dock {
     width: 100%;
     height: 5em;
+  }
+  #dock li span {
+    display: none;
   }
   #dock li img {
     width: 40px;
