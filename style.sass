@@ -220,7 +220,7 @@ nav .time
   position: fixed
   text-align: center
   left: 50%
-  bottom: -50px
+  bottom: -44px
   transform: translate(-50%, -50%)
   display: flex
   justify-content: center
@@ -241,15 +241,15 @@ nav .time
 
     &:hover
       img
-        -webkit-transform: scale(2)
+        -webkit-transform: scale(1.9)
         margin: 0 2em
 
       + li img
-        -webkit-transform: scale(1.5)
+        -webkit-transform: scale(1.4)
         margin: 0 1.5em
 
     &.prev img
-      -webkit-transform: scale(1.5)
+      -webkit-transform: scale(1.4)
       margin: 0 1.5em
 
     span
@@ -272,7 +272,7 @@ nav .time
   ul
     background: rgba(138, 138, 138, 0.7)
     padding: 10px 20px
-    border-radius: 20px
+    border-radius: 20px 20px 0 0
     list-style: none
     display: flex
     justify-content: center
@@ -513,8 +513,7 @@ nav .time
     & li img
       width: 50px
       height: 50px
- 
-    
+  
 @media screen and (max-width: 480px)
   .gallery-section .image
     flex: 100%
