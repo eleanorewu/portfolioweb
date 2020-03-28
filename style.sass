@@ -366,27 +366,8 @@ footer img
 @media screen and (max-width: 1050px)
   .gallery-section .image
     flex: 33.33%
-    
+
 @media screen and (max-width: 864px)
-  .bgpic 
-    width: 100%
-    height: 100%
-    margin-top: 40px
-  & img.mainpic
-    width: 100%
-    height: 100%
-  & .lg-circle
-    display: none
-  & .md-circle
-    display: none
-  & .sm-circle
-    display: none
-  & .flower
-    display: none
-
-  #folder
-    display: none
-
   nav
     height: 25px
 
@@ -506,7 +487,28 @@ footer img
 @media screen and (max-width: 768px)
   .gallery-section .image
     flex: 50%
+@media screen and (max-width: 650px)
+  .bgpic 
+    & .lg-circle
+      display: none
+    & .md-circle
+      display: none
+    & .sm-circle
+      display: none
+    & .flower
+      display: none
 
+  #folder
+    display: none
 @media screen and (max-width: 480px)
   .gallery-section .image
     flex: 100%
+  .bgpic 
+    width: 100%
+    height: 100%
+    margin-top: 40px
+  & img.mainpic
+    width: 100%
+    height: 100%
+  
+  
