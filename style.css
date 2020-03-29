@@ -373,6 +373,7 @@ nav .time span {
   display: inline-block;
   position: relative;
   padding: 0px 5px;
+  cursor: pointer;
 }
 
 #dock li img {
@@ -380,6 +381,8 @@ nav .time span {
   height: 55px;
   -webkit-transition: all 0.3s;
   -webkit-transform-origin: 40% 70%;
+  cursor: pointer;
+  
 }
 
 #dock li:hover img {
