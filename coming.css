@@ -1,0 +1,149 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: #efefef;
+    background-image: url('./bg-imgs/bg-main-pic.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+    font-family: 'Titan One', cursive;
+}
+
+.container{
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #573434;
+}
+
+.container h1{
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin: 0px;
+    animation: ani1 3s infinite;
+}
+.container h2{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 微軟正黑體;
+    letter-spacing: 3px;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+@keyframes ani1 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+        color: #000;
+    }
+    100% {
+        transform: scale(1);
+    }
+}    
+.count{
+    margin: 40px 0;
+}
+
+.countd{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #573434;
+    margin: 0 15px;
+    font-size: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ffffff;
+}
+.countd span{
+    display: block;
+    font-size: 26px;
+    margin-top: 14px;
+}
+
+
+.back-box{
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  a.back-bt {
+    text-transform: uppercase;
+    font-size: 16px;
+    background-color: #7eb0de;
+    padding: 10px 15px;
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    line-height: 1.5;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    font-weight: 300;
+    transition-duration: 0.9s;
+  }
+  
+  a.back-bt:hover{
+    background-color: #fff;
+    color: #7eb0de;
+    border: 3px solid #7eb0de;
+    font-weight: 800;
+  }
+
+@media screen and (max-width: 550px){
+
+    .container h1{
+        font-size: 45px;
+    }
+    .container h2{
+        font-size: 10px;
+    }
+
+    .countd{
+        width: 60px;
+        height: 60px;
+        font-size: 9px;
+    }
+    .countd span{
+        display: block;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 380px){
+
+    .container h1{
+        font-size: 30px;
+    }
+
+    .container h2{
+        font-size: 6px;
+        letter-spacing: 1px;
+    }
+
+    .countd{
+        margin: 0 5px;
+    }
+
+    
+    .back-box{
+        margin-top: 30px;
+        text-align: center;
+    }
+  
+    
+
+}
