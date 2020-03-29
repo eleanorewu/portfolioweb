@@ -437,7 +437,7 @@ nav .time span {
 .copyright {
   position: fixed;
   right: -130px;
-  top: 45%;
+  top: 44%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -445,7 +445,7 @@ nav .time span {
 .copyright p {
   font-size: 12px;
   letter-spacing: 2.5px;
-  font-weight: 700;
+  font-weight: 900;
   color: #763032;
 }
 
