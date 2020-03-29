@@ -12,6 +12,11 @@
 </head>
 
 <body>
+
+    <div class="snow-wrap">
+        <div id="snow"></div>
+    </div>
+    
     <div class="container">
 
         <h1>Coming Soon</h1>
@@ -44,8 +49,17 @@
         <div class="back-box">
             <a href="index.html" class="back-bt">GO BACK HOME</a>
         </div>
-
+        
     </div>
+
+   
+    
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.fallingsnow.min.js"></script>
+
+    <script>
+        $("#snow").fallingSnow();
+    </script>
 
     <script type="text/javascript">
         var count = new Date("jun 1,2020 00:00:00").getTime();
