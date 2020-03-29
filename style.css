@@ -753,17 +753,17 @@ nav .time span {
 
   #dock li:hover img {
     -webkit-transform: none;
-    margin: 0 2em;
+    margin: 0;
   }
   
   #dock li:hover + li img {
     -webkit-transform: none;
-    margin: 0 1.5em;
+    margin: 0;
   }
   
   #dock li.prev img {
     -webkit-transform: none;
-    margin: 0 1.5em;
+    margin: 0;
   }
 
   #dock li:hover span {
